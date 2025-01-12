@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: "Norse Bold";
+    src: url(./fonts/Norse-Bold.otf) format(opentype);
+}
+
 h1 {
     color: red;
 }
