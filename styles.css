@@ -1,4 +1,9 @@
-:root, * {
+:root {
+    --btn-background: #596D48;
+    --border-color: #E5E7EB;
+}
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -63,4 +68,100 @@
 
 .form-section {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    gap: 32px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.form-section p {
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 75%;
+}
+
+.form-section div p:first-child {
+    margin-bottom: 28px;
+}
+
+.floating {
+    border: 1px solid var(--border-color);
+    background-color: white;
+    margin: 0 -36px;
+    padding: 24px 36px;
+    box-shadow: 0px 4px 8px 0px rgba(66, 68, 90, 0.28);
+}
+
+.form-title {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.inputs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 56px;
+    max-width: 80%;
+}
+
+.inputs-container span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.inputs-container span label {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.inputs-container span input {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 4px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.inputs-container span input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 0px 4px 4px -1px rgba(66, 68, 90, 0.28);
+}
+
+.inputs-container span input:invalid {
+    outline: none;
+    border: 1px solid red;
+}
+
+button[type=submit] {
+    margin-top: 24px;
+    background-color: var(--btn-background);
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 3px 8px 0px rgba(66, 68, 90, 0.28);
+}
+
+.form-section span:last-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.form-section span:last-child a {
+    color: var(--btn-background);
+    text-decoration: none;
+}
+
+.form-section span:last-child a:hover {
+    text-decoration: underline;
 }
